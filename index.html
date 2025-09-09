@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güzel Kızıma</title>
+<style>
+/* Genel stil */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
+body {
+  background: radial-gradient(circle at top, #1a1a2e, #0f0f1f);
+  color:#fff;
+  overflow-x:hidden;
+  height:100%;
+}
+
+/* Hero Bölümü */
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero h1 {
+  font-size:3em;
+  color:#ff77aa;
+  z-index:2;
+  opacity:0;
+  animation:fadeInDown 2s forwards;
+}
+
+.hero p {
+  font-size:1.2em;
+  margin-top:20px;
+  color:#eee;
+  z-index:2;
+  opacity:0;
+  animation:fadeInUp 2s forwards 1s;
+}
+
+.hero button {
+  margin-top:40px;
+  padding:15px 35px;
+  font-size:1em;
+  color:#1a1a2e;
+  background:#ff77aa;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s all ease;
+  z-index:2;
+}
+.hero button:hover {transform: scale(1.1); background:#ff99cc;}
+
+/* Kalpler */
+.hearts {
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart {
+  position:absolute;
+  width:0;
+  height:0;
+  stroke:#ff77aa;
+  stroke-width:2;
+  fill:none;
+  opacity:0;
+  animation:drawHeart 4s forwards;
+}
+
+@keyframes fadeInDown {
+  0% {opacity:0; transform: translateY(-50px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+  0% {opacity:0; transform: translateY(50px);}
+  100% {opacity:1; transform: translateY(0);}
+}
+@keyframes drawHeart {
+  0% {stroke-dasharray:0,100; opacity:0;}
+  50% {stroke-dasharray:100,100; opacity:1;}
+  100% {stroke-dasharray:100,0; opacity:0;}
+}
+
+/* Mesaj Bölümü */
+.message {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:50px 20px;
+  background: linear-gradient(135deg,#0f0f1f,#1a1a2e);
+}
+.message h2 {font-size:2.5em; color:#ff77aa; margin-bottom:20px;}
+.message p {font-size:1.2em; color:#fff; max-width:600px;}
+.heart-btn {
+  margin-top:50px;
+  font-size:2em;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:#ff77aa;
+  transition: transform 0.3s ease;
+}
+.heart-btn:hover {transform: scale(1.5);}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>✨ Selam Nasılsın ✨</h1>
+  <p>Senin İçin Azcık Uğraştım Umarım Beğennirsin... </p>
+  <p>(Dayanamadım Evet)</p>
+  <button onclick="scrollToMessage()">Göster</button>
+  <svg class="hearts"></svg>
+</section>
+
+<section class="message" id="message">
+  <h2>Güzel Kızıma Özel</h2>
+  <h2>Seni Seviyorum... Özledim</h2>
+  <p>eee nasıl yapcam bilmiyorum tüm siteyi kodladım ama galiba not yazma kısmında ne yazıcağımı bilmiyorum. Bunu sana Salı akşamı atmayı planlıyorum ama ne zaman atıcam bir fikrim yok açıkcası </p>
+  <br>
+  <p>Sensiz 1 gün bile geçirmek benim için çok zordu. Evet sana kırgınım hala bunu reddedemem ama sein gerçekten çok seviyorum ve sen benim cidden bir parçam oldun. Senden öylece gitmek mümkün değil açıkcası. Senin için çabalamak bişeyler denemek istiyorum.</p>
+  <br>
+  <p>Senin nasıl geçti bilmiyorum ama ben açıkcası tüm gün mutsuzdum. İnsatada bana yazan herkese cevap falan verdim telefonum bozuktu insta şifremi unuttum gibi bişeyler söyledim geçtim herkese. Çok önemli insanlar değil çünkü hiç birisi. Bunu şuan neden anlatıyorum onuda bilmiyorum ya. Galiba boş konuşuyorum şuanda</p>
+  <br>
+  <p>Gerçeği söylücek olursam sensiz olmuyo be yavrum yapamıyorum işte. Senin sesini duymadan senden haber almadan seninle bişeyler konuşmadan bu saçmalamak bile olsa olmuyo yani. Eksik hissediyorum. Yarım... Ben seninle var oldum gibi bi duygu var içimde. Senle mutlu oldum ve senle mutlu olmayada devam etmek istiyorum.</p>
+  <br>
+  <p>Sana söz verdim kendimi bırakmıcam diye ama bunu yapmak benim için daha zor. Bugün solotürk ve türk yıldızlarını izlemeye gittiğimde solotürk geçerken gözümden yaş aktı. İçim acıdı kalbim acıdı. Bana normalde rahatlama veren mutlu hissettiren şey beni üzdü. Yanımdaki insanlara yalandan gülümsüyorum ama ben sana gülümsemek istiyorum.</p>
+  <br>
+  <p>Ben seni istiyorum. Hayatımın her anında, her dakikasında, ömrümün sonuna kadar seni istiyorum sadece. Seninle evlenme hayatta bir dileğim gerçekleşcek deseler hayatımın sonuna kadar seninle olmayı seçerim.</p>
+  <br>
+  <p>Bunu ne zaman cesaret edip atarım bilmiyorum ama bunu yazarken tarih 09.09.2025 saat ise tam 23.59 </p>
+  <h2>Gel Beraber Deneyelim... Seni Ço...ok Seviyorum...</h2>
+  <button class="heart-btn" onclick="burstHearts()">❤️</button>
+</section>
+
+<script>
+// Yavaşça çizilen kalpler
+const heartsContainer = document.querySelector('.hearts');
+
+function createHeart() {
+  const heart = document.createElementNS("http://www.w3.org/2000/svg","path");
+  heart.setAttribute("d","M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z");
+  heart.setAttribute("class","heart");
+  heart.style.transform = `translate(${Math.random()*100}vw, ${Math.random()*80+10}vh) scale(${0.5+Math.random()})`;
+  heartsContainer.appendChild(heart);
+  setTimeout(()=>{heart.remove()},4000);
+}
+
+// Sürekli yavaşça kalp oluştur
+setInterval(createHeart,800);
+
+// Scroll fonksiyonu
+function scrollToMessage() {
+  document.getElementById('message').scrollIntoView({behavior:'smooth'});
+}
+
+// Butona basınca kalpler
+function burstHearts() {
+  for(let i=0;i<10;i++) createHeart();
+}
+</script>
+
+</body>
+</html>
